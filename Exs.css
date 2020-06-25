@@ -1,0 +1,20 @@
+header, footer{
+    background-color:transparent;
+    color: purple;
+    padding: 20px;
+    font-size: xx-large;
+    text-align: center;
+}
+body{
+    background-image: url('https://meshdesignstudio.com/wp-content/uploads/2018/02/mesh-background-portfolio-lglines.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: medium;
+    color: green;
+    font-size: medium;
+}
+nav{
+    width: max-content;
+    height: max-content;
+    text-align: center;
+}

@@ -1,0 +1,12 @@
+header, footer{
+    background-color:transparent;
+    color: black;
+    padding: 50px;
+    font-size: medium;
+    text-align: center;
+}
+body {
+    text-align: center;
+    color: blueviolet;
+    padding: 12px;
+}
