@@ -1,27 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
-    <h1>Login</h1>
-    <form>
-        Username: <input type="text" name="name">
-        Password: <input type="password" name="pwd">
-        <input type="submit" value="submit">
-    </form>
-    <script language="javascript">
-        function check(form)
-        {
-            window.location.href = "Login.html";
-            if(form.name.value == "JY" || form.pwd.value == "20"){   
-                document.location.href="home.html";
-                return true;
-            }
-            else{
-                alert("Error Password or Username")
-                return false;
-            }
+
+<div class="container">
+<div class="header">
+ <h1>Login To YouTube</h1>
+ </div>
+
+ <form name="login" onsubmit="return validateForm() ;" method="post">
+
+ <ul>
+ <li>Username: <input class="username" type="text" name="username">
+ </li>
+
+ <li>Password: <input class="password" type="password" name="password">
+ </li>
+ </ul>
+
+<input type="button" class="submit" value="Log In" name="submit" onclick="validate()">
+</form>
+</div>
+
+<script>
+
+var count= 2;
+
+function validate() {
+	var un = document.login.username.value;
+	var pw = document.login.password.value;
+	var valid = false;
+	var usernameArray = ["jy", "Bob"];
+	var passwordArray = ["0870", "090"];
+	for (var i = 0; i < usernameArray.length; i++) {
+        if ((un == usernameArray[i]) && (pw == passwordArray[i])) {
+            valid = true;
+            break;
         }
-    </script>
-</body> 
+    }
+	if (valid) {
+		window.location = "home.html";
+		return false;
+	}
+	var again = " tries";
+	if (count ==1) {
+    	again = " try"
+	} if (count >= 1) {
+		alert("Wrong password or username")
+		count--;
+	} else{
+		alert("Incorrect password or username you are now blocked");
+		document.login.username.value = "You are now Blocked";
+		document.login.password.value = "Fool you can't see this";
+		document.login.username.disabled = true;
+		document.login.password.disabled = true;
+		return false;
+	}
+}
+
+</script>
+</body>
 </html>
