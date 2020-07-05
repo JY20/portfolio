@@ -12,12 +12,18 @@ body{
     color: white;
     font-size: 30px;
 }
-nav{
-    width: max-content;
-    height: max-content;
+div {
+    padding: 0; 
+    margin: 0;
     text-align: center;
 }
-section{
-    margin: auto;
+p {
+    padding: 0; 
+    margin: 0;
+    text-align: center;
+}
+h1 {
+    padding: 0; 
+    margin: 0;
     text-align: center;
 }
